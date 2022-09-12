@@ -2,11 +2,14 @@ import PropTypes from 'prop-types';
 import ContactListItem from './ContactListItem/ContactListItem';
     
 const ContactList = ({ list, onRemove }) => {
-    return (<ul>
-        {list.map((list) => (
-            <ContactListItem list={list} onRemove={onRemove}/>
-        ))}
-        </ul>
+    return (
+        <>
+            <ul>
+            {list.map((list) => (
+                <ContactListItem item={list} onRemove={onRemove}/>
+            ))}
+            </ul>
+        </>
     )
 };
 
