@@ -42,7 +42,7 @@ export default function Phonebook() {
 
                 <h2>Contacts</h2>
                 <Filter onChange={handleChangeFilter} value={filter}/>
-                <ContactList list={handleFilterContacts} onRemove={handleRemoveContact}/>
+                <ContactList list={handleFilterContacts()} onRemove={handleRemoveContact}/>
             </>
             
         )

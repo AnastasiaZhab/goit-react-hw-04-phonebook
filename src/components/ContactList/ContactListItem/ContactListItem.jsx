@@ -1,8 +1,8 @@
 import s from '../ContactList.module.css'
 import PropTypes from 'prop-types'
 
-const ContactListItem = ({ list, onRemove }) => {
-    const {id, name, number} = list
+const ContactListItem = ({ item, onRemove }) => {
+    const {id, name, number} = item
     return (
             <li key={id}>
                 <span>{name}</span> - <span>{number}</span>

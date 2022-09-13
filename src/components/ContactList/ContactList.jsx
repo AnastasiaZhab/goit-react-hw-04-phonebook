@@ -5,8 +5,8 @@ const ContactList = ({ list, onRemove }) => {
     return (
         <>
             <ul>
-            {list.map((list) => (
-                <ContactListItem item={list} onRemove={onRemove}/>
+            {list.map((el) => (
+                <ContactListItem item={el} onRemove={onRemove}/>
             ))}
             </ul>
         </>
