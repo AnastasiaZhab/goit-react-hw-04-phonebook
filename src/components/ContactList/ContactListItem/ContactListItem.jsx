@@ -1,10 +1,8 @@
 import s from '../ContactList.module.css'
-import PropTypes from 'prop-types'
 
-const ContactListItem = ({ item, onRemove }) => {
-    const {id, name, number} = item
+const ContactListItem = ({id, name, number, onRemove }) => {
     return (
-            <li key={id}>
+            <li>
                 <span>{name}</span> - <span>{number}</span>
                 <button type="button" name={id} className={s.button} onClick={onRemove}>Remove</button>
             </li>
@@ -14,9 +12,3 @@ const ContactListItem = ({ item, onRemove }) => {
 
 export default ContactListItem;
 
-ContactListItem.propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-    onRemove: PropTypes.func.isRequired,
-}
